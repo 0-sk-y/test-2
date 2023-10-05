@@ -1,0 +1,69 @@
+/* (>‿◠)✌ Variables CSS (>‿◠)✌ */
+
+:root {
+  /*   -> Header <-   */
+  /*   -> Left <-   */
+  /*   -> c-1 <-   */
+  /*   -> c-2 <-   */
+  /*   -> c-3 <-   */
+  /*   -> c-4 <-   */
+  /*   -> Right <-   */
+  /*   -> Footer <-   */
+
+  /*   -> Gradients <-   */
+  --gd-1: linear-gradient(rgb(0,0,0), rgb(58,58,58));
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* <=<=<=<=<=<=<=[ Layout ]=>=>=>=>=>=>=>=> */
+
+.gc {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr) 20%;
+  grid-template-rows: 15% repeat(2, 1fr) 15%;
+  grid-template-areas: 
+  "header header header header"
+  "left c-1 c-2 right"
+  "left c-3 c-4 right"
+  "footer footer footer footer";
+}
+
+/* ➞➞➞➞➞ Header ➞➞➞➞➞ */
+.header {grid-area: header;}
+/* ➞➞➞➞➞ L ➞➞➞➞➞ */
+.left {grid-area: left;}
+/* ➞➞➞➞➞ c-1 ➞➞➞➞➞ */
+.c-1 {grid-area: c-1;}
+/* ➞➞➞➞➞ c-2 ➞➞➞➞➞ */
+.c-2 {grid-area: c-2;}
+/* ➞➞➞➞➞ c-3 ➞➞➞➞➞ */
+.c-3 {grid-area: c-3;}
+/* ➞➞➞➞➞ c-4 ➞➞➞➞➞ */
+.c-4 {grid-area: c-4;}
+/* ➞➞➞➞➞ R ➞➞➞➞➞ */
+.right {grid-area: right;}
+/* ➞➞➞➞➞ Footer ➞➞➞➞➞ */
+.footer {grid-area: footer;}
