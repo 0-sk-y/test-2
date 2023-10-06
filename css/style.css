@@ -2,16 +2,33 @@
 
 :root {
   /*   -> Header <-   */
+  --header-bg: var(--c-g-1);
   /*   -> Left <-   */
+  --l-bg: var(--gd-2);
   /*   -> c-1 <-   */
   /*   -> c-2 <-   */
   /*   -> c-3 <-   */
   /*   -> c-4 <-   */
   /*   -> Right <-   */
+  --r-bg: var(--gd-2);
   /*   -> Footer <-   */
-
+  --footer-bg: var(--c-g-1);
   /*   -> Gradients <-   */
   --gd-1: linear-gradient(rgb(0,0,0), rgb(58,58,58));
+  --gd-1-50: linear-gradient(rgba(0,0,0,.4), rgba(58,58,58,.4));
+  --gd-1-inv: linear-gradient(rgb(58,58,58), rgb(0,0,0));
+  --gd-2: linear-gradient(rgb(0,0,0), rgb(58,58,58), rgb(0,0,0));
+  /*   -> Colores <-   */
+  --c-g-1: rgb(25,25,25);
+  --c-g-2: rgb(50,50,50);
+  --c-g-3: rgb(75,75,75);
+  --c-g-4: rgb(100,100,100);
+  --c-g-5: rgb(125,125,125);
+  --c-g-6: rgb(150,150,150);
+  --c-g-7: rgb(175,175,175);
+  --c-g-8: rgb(200,200,200);
+  --c-g-9: rgb(225,225,225);
+  --c-g-10: rgb(250,250,250);
 }
 
 html {
@@ -28,6 +45,10 @@ html {
   padding: 0;
   text-decoration: none;
   line-height: 1.5;
+}
+
+body {
+  background-image: var(--gd-2);
 }
 
 img,
@@ -49,6 +70,7 @@ video {
   "left c-1 c-2 right"
   "left c-3 c-4 right"
   "footer footer footer footer";
+  gap: 0.2%;
 }
 
 /* ➞➞➞➞➞ Header ➞➞➞➞➞ */
@@ -67,3 +89,56 @@ video {
 .right {grid-area: right;}
 /* ➞➞➞➞➞ Footer ➞➞➞➞➞ */
 .footer {grid-area: footer;}
+
+.header,
+.left,
+.c-1,
+.c-2,
+.c-3,
+.c-4,
+.right,
+.footer {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--c-g-1);
+}
+
+/* <=<=<=<=<=<=<=[ int ]=>=>=>=>=>=>=>=> */
+
+.int {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  border: 1px solid var(--c-g-2);
+}
+
+/* <=<=<=<=<=<=<=[ Header ]=>=>=>=>=>=>=>=> */
+
+.header {
+  background-image: var(--header-bg);
+}
+
+/*   -> int <-   */
+
+/* <=<=<=<=<=<=<=[ L ]=>=>=>=>=>=>=>=> */
+
+.left {
+  background-image: var(--l-bg);
+}
+
+/* <=<=<=<=<=<=<=[ c-1 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ c-2 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ c-3 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ c-4 ]=>=>=>=>=>=>=>=> */
+/* <=<=<=<=<=<=<=[ R ]=>=>=>=>=>=>=>=> */
+
+.right {
+  background-image: var(--r-bg);
+}
+
+/* <=<=<=<=<=<=<=[ Footer ]=>=>=>=>=>=>=>=> */
+
+.footer {
+  background: var(--footer-bg);
+}
+
