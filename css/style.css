@@ -507,6 +507,29 @@ video {
   outline: 2px solid var(--c-g-9);
 }
 
+.header .int:nth-child(12) {
+  left: 50%;
+  width: 15%;
+  height: 25%;
+  top: -10%;
+  transform: translate(-50%, 0);
+  border-radius: 0 0 2rem 2rem;
+  outline: 1px solid var(--c-g-10);
+  background-color: aquamarine;
+  animation: hue 4s linear infinite;
+}
+
+.header .int:nth-child(13) {
+  left: 50%;
+  width: 15%;
+  height: 25%;
+  bottom: -10%;
+  transform: translate(-50%, 0);
+  border-radius: 2rem 2rem 0 0;
+  outline: 1px solid var(--c-g-7);
+  background-image: var(--gd-1-inv);
+}
+
 /* <=<=<=<=<=<=<=[ LR ]=>=>=>=>=>=>=>=> */
 
 .left,
@@ -825,6 +848,8 @@ video {
   bottom: -10%;
   transform: translate(-50%, 0);
   border-radius: 2rem 2rem 0 0;
-  background-image: var(--gd-3);
+  outline: 1px solid var(--c-g-10);
+  background-color: aquamarine;
+  animation: hue 4s linear infinite;
 }
 
